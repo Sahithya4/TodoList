@@ -1,0 +1,26 @@
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div id="myDIV" class="header">
+    <h2>{{list.name}}'s To Do List</h2>
+    <input type="text" class="myInput" placeholder="Task Name..." #name>
+    <button (click)="addTask(name.value)" class="addBtn">ADD</button>
+</div>
+<div>
+    <!-- <div>
+        <button >{{tasklength}}</button>
+    </div> -->
+    <div *ngFor="let lists of tasks" class="container-name"> 
+        <div>
+            <input id="checkbox" [(ngModel)]="lists.checked" name="taskdone" value="taskdone" class="strikethrough" (click)="tasksdone(lists,tasks)" type="checkbox">
+            <label for="taskdone" *ngIf="!edit; else editing" (click)="edits(lists.name)"><h2>{{lists.name}}</h2></label>
+            <ng-template #editing>
+                <input type="text" class="task-edit" [(ngModel)]="lists.name" (keyup.enter)="edittask(tasks)"> 
+            </ng-template>
+        </div>
+        <div>
+        <button (click)="deletelist(lists.name)"><i class="fa fa-trash"></i></button>
+        </div>
+    </div>
+    <button type="button" class="Btn" routerLink="">back</button>
+</div> 

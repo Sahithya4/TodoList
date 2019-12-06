@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: rgb(165, 118, 187);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  .container-name div {
+    display: inline-block;
+	width: 500px;
+	min-height: 50px;
+
+	height: auto;
+  }
+  .Btn {
+    display: block;
+    padding: 7px;
+    width: 8%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.0s;
+    border-radius: 0;
+  }
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the input */
+  .myInput {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 60%;
+    padding: 8px;
+    float: left;
+    font-size: 16px;
+  }
+label,input{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.strikethrough:checked + label{
+text-decoration: line-through;
+background-color: rgb(181, 191, 192);
+}
+
+    /* Style the "Add" button */
+    .addBtn {
+        padding: 7px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+      }
+      .form-inline {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+      .addBtn:hover {
+        background-color: #bbb;
+      }

@@ -1,0 +1,20 @@
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title Name..." #name>
+        <button (click)="addList(name.value)" class="addBtn">ADD</button>
+</div>      
+<div class="container">
+        <div *ngFor="let list of todolist" class="container-name"> 
+            <div class="col" *ngIf="!edit; else editing" (click)="edittodo(list.name)"><h2>{{list.name}}</h2></div>
+            <ng-template #editing>
+                <input type="text" class="todo-edit" [(ngModel)]="list.name" (keyup.enter)="editList(todolist)"> 
+            </ng-template>
+            <div class="col">
+            <button class="Btn" (click)="route(list)">{{list.tasklist}}</button>
+            <button (click)="deletelist(list.name)" class="Btn"><i class="fa fa-trash"></i></button>
+            </div>
+        </div>
+</div> 

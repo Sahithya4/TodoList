@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: rgb(110, 177, 231);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 60%;
+    padding: 8px;
+    float: left;
+    font-size: 16px;
+  }
+  .container-name div {
+    display: inline-block;
+	width: 300px;
+	min-height: 20px;
+
+	height: auto;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 7px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  .Btn {
+    padding: 3px;
+    width: 28%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    margin-right: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .addBtn:hover {
+    background-color: #bbb;
+  }
